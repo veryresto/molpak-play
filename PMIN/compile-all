@@ -1,0 +1,11 @@
+rm -f *.o
+rm -f *.mod
+rm -f pmin.exe
+lf95 -c f77kinds.f90
+lf95 -O -c *module.f90 f77kinds.o
+lf95 -O -c pmin_26oct10.f90
+lf95 -O -o pmin.exe *.o
+echo "-----"
+echo "** new pmin.exe created with pmin_26oct10.f90 **"
+echo "-----"
+ls -al *.exe

@@ -1,0 +1,16 @@
+rm -f *.o
+lf95 -c molpakCommonMod.f90
+lf95 -c z*.f90
+lf95 -c exchange.f90
+lf95 -c wmin.f90
+lf95 -c setcharge.f90
+lf95 -c seek*.f90
+lf95 -c page.f90
+lf95 -c f*.f90
+lf95 -c minhi.f90
+lf95 -c enantio.f90
+lf95 -c molpak.f90 
+lf95 -O -o molpak_09.exe *.o
+echo " executable molpak_09.exe created "
+
+

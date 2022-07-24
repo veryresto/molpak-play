@@ -1,0 +1,43 @@
+   The compressed tar file "PREDICTIONS.tar.gz" contains
+the various programs and script files required to run the 
+molpak/pmin structure prediction procedures. 
+
+   Do the following... 
+(1) gunzip PREDICTIONS.tar.gz.
+(2) tar -xvf PREDICTIONS.tar
+
+   These steps create the "PREDUCTIONS" directory which will contain
+the "MOLPAK", "PMIN","UTILITIES", and "new-U" subdirectories and several files.  
+
+   The PREDICTIONS directory and Each of the subdirectories contains "compile-all" 
+files to compile and link programs in the various directories.
+
+   Before compiling, etc, you must replace the name of our compiler with
+the name of your compile in all of the compile-all files.  We use "lf95".  
+
+   There are several programs and scripts in the UTILITIES subdirectory.  It
+is necessary to change the name "PREDICTIONS" to the name of the directory
+in which the programs, etc will reside for subsequent execution.  For example, 
+our directory is named "/export/software/PREDICTIONS".  
+This is done by the following steps -->
+  (1) replace "lf95" with your compiler's name in compile-all in the top
+directory, here assumed to be PREDICTIONS  
+  (2) copy all files in new-U to UTILITIES --> "cp new-U/* UTILITIES/."
+  (3) ./compile-all --> compiles and links the program "renaname-dir.f90"
+  (4) ./rename-dir.com --> this changes all the occurences of "PREDICTIONS" in
+      the needed files in UTILITIES to "/export/software/PREDICTIONS"
+      or whatever directory you happen to be in when you do ./rename-dir.com.
+
+   Establish the following aliases... 
+
+ alias  transform /export/software/PREDICTIONS/UTILITIES/transform.exe
+ alias  prepare-files /export/software/PREDICTIONS/UTILITIES/prepare-files.exe
+ alias  make-files /export/software/PREDICTIONS/UTILITIES/make-files.com
+ alias  chem3d /export/software/PREDICTIONS/UTILITIES/chem3d.exe
+ alias  summarize /export/software/PREDICTIONS/UTILITIES/summarize_tab.com
+ alias  resort-summarize /export/software/PREDICTIONS/UTILITIES/resort-summarize.com
+    
+   The aliases facilitate executing the various calculations.  For example, to perform
+molpak/pmin icalculations, just type "make-files" and answer the questions that follow.   
+
+EXAMPLES are provided.    GOOD LUCK!

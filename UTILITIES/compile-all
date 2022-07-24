@@ -1,0 +1,22 @@
+rm *.o
+rm *.exe
+lf95 -c make_filesCommonMod.f90
+lf95 -o make_files.exe make_files.f90 make_filesCommonMod.o
+lf95 -o make-molpak-com-find.exe make-molpak-com-find.f90
+lf95 -o min-vol-search.exe min-vol-search.f90
+lf95 -o summarize_tab.exe summarize_tab.f90
+lf95 -o table-1.exe table-1.f90
+lf95 -o table-2.exe table-2.f90
+lf95 -o volume-additivity-densities-4.exe volume-additivity-densities-4.f
+lf95 -o atom_code-vol-additivity.exe atom_code-vol-additivity.f
+lf95 -o resort-summarize-tab.exe resort-summarize-tab.f90
+lf95 -c nbsLatticeMod.f90
+lf95 -o nbslattice.exe nbslattice.f90 nbsLatticeMod.o
+lf95 -c prepare_files_module.f90
+lf95 -o prepare-files.exe prepare_files.f90 prepare_files_module.o
+lf95 -c transformCommonMod.f90
+lf95 -o transform.exe transform.f transformCommonMod.o
+lf95 -o chem3d.exe chem3d.f90
+
+
+

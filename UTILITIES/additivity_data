@@ -1,0 +1,110 @@
+ #  old#      lin V    nonl V    lin d       wt     atom/group
+--- ----     ------    ------    ------    ------   ----------
+  1(# 54)     4.666     9.650    -8.008    1.0080  H bonded to sp C                                            
+  2(#  1)     6.469     7.873    -6.134    1.0080  H bonded to non-aromatic sp2 C                              
+  3(#108)     7.328     8.409    -6.092    1.0080  H bonded to aromatic sp2 C                                  
+  4(#  2)     5.436     6.486    -4.219    1.0080  H bonded to normal Csp3                                     
+  5(# 36)     4.943     3.549    -8.063    1.0080  H linked to cubane                                          
+  6(#  3)     6.517     6.028    -2.654    1.0080  H of R2NH, RNH2 or =N-H                                     
+  7(# 42)     6.883     6.411    -3.686    1.0080  amide H (NH or NH2)                                         
+  8(# 53)    18.296    16.446    14.970   12.0110  sp C of an alkyne not in a ring                             
+  9(# 55)    16.342    15.272    16.256   12.0110  sp C of an alkyne in a ring                                 
+ 10(# 64)    22.390    17.330    17.902   12.0110  terminal allene R2C=; R2C=C=CR2, R2C=C=N                    
+ 11(# 65)     8.369     9.381    16.427   12.0110  central allene C; =C= in C=C=C, C=C=N, N=C=O                
+ 12(#  4)    13.547    12.363    19.283   12.0110  Csp2 not in any rings                                       
+ 13(# 24)    13.179    11.180    20.340   12.0110  Csp2 with two bonds (not C=C or C=N) in a ring              
+ 14(#112)    12.984    11.709    19.762   12.0110  Csp2 with two bonds (the C=C or C=N) in a ring              
+ 15(# 25)    10.941    10.811    20.727   12.0110  Csp2 with three bonds in a ring                             
+ 16(# 33)    12.409    11.570    19.293   12.0110  aromatic C with 2 bonds in rings                            
+ 17(# 34)    11.082    10.518    20.918   12.0110  aromatic C with 3 bonds in rings, 2 of which are aromatic   
+ 18(# 35)    10.487    10.154    21.074   12.0110  aromatic C with 3 bonds in rings, 3 of which are aromatic   
+ 19(# 23)    12.006    12.179    21.701   12.0110  Csp3 not in a ring                                          
+ 20(#105)    21.501    18.879    14.736   13.0189  CH not in a ring                                            
+ 21(#106)    24.374    24.401    11.690   14.0269  CH2 not in a ring                                           
+ 22(#107)    32.170    33.286     5.134   15.0348  CH3 of CH3-C                                                
+ 23(#134)    30.849    31.917     6.305   15.0348  CH3 of CH3-N                                                
+ 24(#135)    29.297    30.035     8.640   15.0348  CH3 of CH3-O                                                
+ 25(#136)    32.176    32.687     4.295   15.0348  CH3 of CH3-S                                                
+ 26(# 98)    13.323    12.169    19.073   12.0110  Csp3 with 2 bonds in a 3-membered ring                      
+ 27(# 99)    13.738    11.647    19.909   12.0110  Csp3 with 2 bonds in a 4-membered ring                      
+ 28(#100)    12.424    10.858    20.377   12.0110  Csp3 with 2 bonds in a 5-membered ring                      
+ 29(#101)    12.410    10.492    20.914   12.0110  Csp3 with 2 bonds in a 6-membered ring                      
+ 30(#102)    12.384    10.512    20.732   12.0110  Csp3 with 2 bonds in a 7-membered ring                      
+ 31(#103)    12.718    10.179    21.018   12.0110  Csp3 with 2 bonds in a 8-membered ring                      
+ 32(#104)    13.133    10.930    20.531   12.0110  Csp3 with 2 bonds in a > 8-membered ring                    
+ 33(# 21)    10.395     9.390    22.109   12.0110  Csp3 with three bonds in a ring                             
+ 34(# 22)    10.343     9.097    22.001   12.0110  Csp3 with four bonds in a ring                              
+ 35(#  5)    11.640    13.056    24.079   12.0110  cubane C                                                    
+ 36(#  9)    15.415    12.867    24.465   14.0067  tertiary N not in a ring; not C(sp2)-linked                 
+ 37(# 86)    10.539     8.787    27.347   14.0067  tertiary N not in a ring; C(sp2)-linked                     
+ 38(# 58)    10.457     9.743    26.670   14.0067  tertiary N in one ring                                      
+ 39(# 59)    10.020     8.700    27.856   14.0067  tertiary N in two or three rings                            
+ 40(# 10)     6.670     8.703    27.382   14.0067  N (NH2, NH, NHF, NF2) not C(sp2)-linked                     
+ 41(# 85)     9.068     9.547    25.277   14.0067  N (NH2, NH, NHF, NF2) C(sp2)-linked                         
+ 42(# 47)    12.681    13.004    22.835   14.0067  sp2 N in -C=N- or =C=C=N- not in a ring                     
+ 43(# 50)    12.446    12.148    24.723   14.0067  sp2 N in -C=N- or =C=C=N- in a ring                         
+ 44(# 43)     8.511     8.838    27.348   14.0067  amide N                                                     
+ 45(# 48)    11.202    10.404    25.557   14.0067  pyrrole N in one ring                                       
+ 46(# 49)    10.819     8.736    27.711   14.0067  pyrrole N in two rings                                      
+ 47(# 16)    11.276    12.037    25.562   14.0067  pyridine or aza-pyrrole N                                   
+ 48(# 19)    11.560    11.690    28.145   14.0067  Z-tetraazapentalene N                                       
+ 49(# 51)    13.649    12.902    24.495   14.0067  N of diazo unit; -N=N-                                      
+ 50(# 14)    12.690    13.184    27.960   15.9994  "ether" O, C(N)-O-C(N) not in a ring                        
+ 51(# 44)    12.635    11.763    29.655   15.9994  "ether" O, C(N)-O-C(N) in a ring                            
+ 52(# 95)    16.043    16.374    23.628   15.9994  "ether" O in ester or anhydride not in a ring               
+ 53(# 94)    12.596    12.286    28.660   15.9994  "ether" O in ester or anhydride in a ring                   
+ 54(# 76)    12.205    12.680    28.951   15.9994  epoxide O                                                   
+ 55(# 52)    13.759    14.631    29.234   15.9994  O of furan                                                  
+ 56(# 66)    11.300    11.084    30.846   15.9994  peroxide O (-O-O-)                                          
+ 57(# 81)    19.096    21.169    30.028   15.9994  O in N=C=O and C=C=O                                        
+ 58(#143)    27.227    27.432    55.971   30.9738  P of phosphine, C3P                                         
+ 59(#129)    24.834    24.611    63.998   32.0660  S of thiophene                                              
+ 60(#133)    25.703    25.922    58.865   32.0660  S of sulfide (C-S-C)                                        
+ 61(#137)    25.536    24.691    62.649   32.0660  central S of C-S-S                                          
+ 62(#138)    26.969    26.215    62.597   32.0660  central S of S-S-S                                          
+ 63(# 87)    13.454    14.236    40.934   18.9984  F-C(sp2)                                                    
+ 64(# 88)    13.524    13.838    39.154   18.9984  F-C(sp3)                                                    
+ 65(# 13)    16.598    16.548    39.091   18.9984  F of N-F                                                    
+ 66(# 12)    33.278    35.894   218.649   79.9040  Br of Csp3-Br                                               
+ 67(#118)    34.263    33.841   207.818   79.9040  Br of Csp2-Br                                               
+ 68(#114)    27.728    28.297    69.801   35.4527  CL of Csp2-CL                                               
+ 69(#113)    27.833    28.269    68.658   35.4527  CL of Csp3-CL                                               
+ 70(# 26)    35.610    36.106    88.347   46.0055  normal NO2 group                                            
+ 71(#111)    35.410    35.861    88.690   46.0055  NO2 of C(sp2)-NO2                                           
+ 72(# 38)    36.423    34.741    91.574   46.0055  cubane-linked nitro group                                   
+ 73(# 28)    45.242    43.088   116.645   60.0122  N-NO2 group not in a ring                                   
+ 74(# 29)    43.916    43.985   122.397   60.0122  N-NO2 group in a ring                                       
+ 75(#109)    48.331    48.992   118.360   62.0049  -O-NO2 group                                                
+ 76(# 63)    23.828    25.219    53.958   30.0060  nitroso group (-N=O)                                        
+ 77(# 72)    42.256    42.354    63.039   40.0244  3 atom diazo unit (C=N[+]=N[-])                             
+ 78(# 41)    41.310    40.583    77.519   45.0177  -CO2H group                                                 
+ 79(# 73)    23.881    23.599    49.513   28.0104  C=O not in a ring                                           
+ 80(# 97)    23.741    23.996    49.543   28.0104  C=O in a ring                                               
+ 81(# 78)    25.960    25.002    48.080   28.0104  C=O of amide, urea or imide                                 
+ 82(#117)    40.918    41.087    74.140   44.0770  C=S                                                         
+ 83(# 74)    12.931    13.660    31.203   17.0074  O & H of Csp3-O-H, -NH-OH or -O-O-H group                   
+ 84(# 75)    14.802    15.142    30.003   17.0074  O & H of Csp2-O-H group                                     
+ 85(#132)    35.132    32.096    56.474   33.0739  S-H of thiol                                                
+ 86(#121)    34.164    33.512    93.210   48.0654  S-O of sulfoxide                                            
+ 87(#124)    44.489    43.196   127.191   64.0648  SO2 of sulfone                                              
+ 88(#128)    57.255    57.524   152.126   80.0642  SO3 of sulfonate                                            
+ 89(#142)    54.564    55.040   149.854   78.0715  SO2-N of a sulfonamide (C-SO2-NR2, R = H or C)              
+ 90(# 77)    30.644    31.964    35.137   26.0177  nitrile or isocyanide, C#N                                  
+ 91(# 90)    23.488    22.773    56.382   30.0061  N-O of -N(O)=N- or -N(O)=N(O)-                              
+ 92(# 91)    20.069    20.188    59.457   30.0061  pyridine N-oxide or C=N(C,+)-O(-) N-O                       
+ 93(# 92)    18.511    15.835    63.230   30.0061  amine N-oxide, R3N(+)-O(-), N-O                             
+ 94(# 93)    17.096    20.850    57.016   30.0061  amine N-oxide, R2N-O, N-O                                   
+ 95(# 84)    40.412    35.499    73.868   42.0201  3 nitrogens of C-N(-)-N(+)(C)=N-C group                     
+ 96(# 39)    39.871    43.023    67.697   42.0201  azide group (N=N=N)                                         
+ 97(#150)    64.588    64.334   121.256   71.0357  C(=O)-NH-C(=O)                                              
+ 98(#151)    68.678    66.402   170.857   90.0825  SO2-N=C of sulfonimine, C-SO2-N=C                           
+ 99(#156)    11.901     9.670    32.660   15.9994  O of phenoxide                                              
+100(#157)     5.285     6.072    -2.487    1.0079  H of ammonium N                                             
+101(#158)     8.946     6.694    25.092   14.0067  ammonium N, not amine oxide                                 
+102(#159)    45.229    44.963   385.316  126.9045  I linked to Csp2                                            
+103(#160)    47.694    45.476   355.972  126.9045  I linked to Csp3                                            
+104(#161)   -11.261    18.704    65.255   32.0660  S+ or C3-S+                                                 
+105(#162)    33.137    32.840    83.249   44.0098  -CO2(-)                                                     
+106(#164)    29.912    29.953    64.449   35.4530  Cl-                                                         
+107(#165)    38.692    38.350   181.859   79.9040  Br-                                                         
+108(#166)    54.014    52.457   305.744  126.9045  I-                                                          
