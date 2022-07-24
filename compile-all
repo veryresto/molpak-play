@@ -1,1 +1,1 @@
-lf95 -O -o rename-dir.exe rename-dir.f90
+gfortran -O -o rename-dir.exe rename-dir.f90
