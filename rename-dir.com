@@ -1,4 +1,4 @@
-#!/bin/csh
+
 pwd > dir
 ./rename-dir.exe
 mv -f fort.13 UTILITIES/make-files.com
