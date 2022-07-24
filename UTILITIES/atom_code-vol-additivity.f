@@ -93,7 +93,8 @@ C----Open xyz file
       OPEN (UNIT=9,FILE=INFILE,STATUS='OLD')
 C
 C----File # 24 = atom code and volume data
-      DIR='/PREDICTIONS/UTILITIES/atom_code_volume.data'
+      DIR='/c/Users/ACER/Downloads/PREDICTIONS/UTILITIES/atom_code_volum&
+     &e.data'
 !     DIR='/export/software/predictions-100cyc04/UTILITIES/atom_code_vol&
 !    &ume.data'
          OPEN (UNIT=24, FILE=DIR, STATUS='OLD')

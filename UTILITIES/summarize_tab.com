@@ -1,5 +1,5 @@
 #!/bin/csh
-setenv dir /PREDICTIONS
+setenv dir /c/Users/ACER/Downloads/PREDICTIONS
 ls */*tab > TAB_FILES      # directory names
 chmod 744 TAB_FILES
 $dir/UTILITIES/summarize_tab.exe

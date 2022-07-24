@@ -1,5 +1,5 @@
 #!/bin/csh
-setenv dir /PREDICTIONS
+setenv dir /c/Users/ACER/Downloads/PREDICTIONS
 goto JUMP
 set f='AF BH BD BF AH AY AZ AV AB AQ AI CC DC AK CA AM FA FC DA DB DD DE CB AA AP BA BB CD CE AU AS'
 set d='af bh bd bf ah ay az av ab aq ai cc dc ak ca am fa fc da db dd de cb aa ap ba bb cd ce au as'

@@ -1,7 +1,7 @@
-      PROGRAM MAKE_FILES                        
-!     The latest version 09-04-2014 
+      PROGRAM MAKE_FILES
+!     The latest version 09-04-2014
 !     updated it for repalcing DMAREL with DMACRYS       1-29-09    DU
-!     updated on 7-9-2008 for adding PMIN                           DU 
+!     updated on 7-9-2008 for adding PMIN                           DU
 !     54 geoms codes added                               9-18-07    DU
 !     updated...added "limit cputime for running wmin"   2-13-07    DU
 !     Updated...add ability to read cross-term coef information for
@@ -11,7 +11,7 @@
 !           DMACRYS structure predictions.
 !    For WMIN refinement, procedure requires only model coordinate
 !           files with charges.  Use of DMACRYS is sufficently more
-!           complicated and requires four additional input files.  
+!           complicated and requires four additional input files.
 !
 !
       USE make_filesCommonMod
@@ -109,12 +109,12 @@
 !----Select program for refinement (WMIN or PMIN or DMACRYS)
 3300  WRITE (*,3302)
 3302     FORMAT ('Program for lattice refinement...1 = WMIN,', &
-     &          ' 2 = PMIN, 3 = DMACRYS [1]: ',$)                         
+     &          ' 2 = PMIN, 3 = DMACRYS [1]: ',$)
       READ (*,337) R_KIND
       IF (R_KIND .EQ. '1' .OR. R_KIND .EQ. ' ') THEN
          KIND = 1
          GO TO 3155
-      ELSE 
+      ELSE
        IF (R_KIND .EQ. '2') THEN                                         ! 7-9-08
          KIND = 2          ! not blank or 1 or 3  assume PMIN refinement ! 7-9-08
 !        WRITE (*,3305)
@@ -444,7 +444,7 @@ Big_loop : DO LGRPS=1,N_GO
 !----Start to write master.com... files
       WRITE (20,39) (NMOL+1)
 39    FORMAT ('#!/bin/csh'/'pwd'/'#'/'time'/'date'/'#'/ &
-     &   'setenv dir PREDICTIONS'/ &
+     &   'setenv dir /c/Users/ACER/Downloads/PREDICTIONS'/ &
      &   '#mkdir WMININP_LS WMININP_MPK'/&
      &   '#'/'#****initial MOLPAK search****'/'#'/ &
      &   '# if input.* exists, restart WMIN'/ &
@@ -592,11 +592,11 @@ Big_loop : DO LGRPS=1,N_GO
 !    &'echo " ### soln $i ### " >> wmin.dis'/&
 !    &'cat fort.29 >> wmin.dis')
       WRITE (20,500) G92FILE2(1:NID+7), SUM , G92FILE2(1:NID+7), G92FILE2(1:NID+7), &
-     &               G92FILE2(1:NID+7)                      ! 9-4-14    
+     &               G92FILE2(1:NID+7)                      ! 9-4-14
 !     chenaged them on 11-4-04
       WRITE (20,1666)
  1666 FORMAT('#make new wmin input for LSQ'/ &
-     & 'if ($i == 1) cp -f fort.22 wmin_RSS.save' /&                 
+     & 'if ($i == 1) cp -f fort.22 wmin_RSS.save' /&
      & 'mv -f fort.22 wmin.save'/ &
      & '$dir/UTILITIES/rewrite-wmininp-100.exe'/ &
      & 'if (-e wminlsq.inp) then'/ &
@@ -633,9 +633,9 @@ Big_loop : DO LGRPS=1,N_GO
 !    &       '    goto wminend'/'   endif'/'  endif'/' endif'/ &
 !    &       '   @ n = ($n + 1)'/' end'/'wminend:'/&
 !    &       'cp fort.15 WMININP_LS/wmininput.$i')
-      WRITE(20,500) G92FILE2(1:NID+7), SUM, G92FILE2(1:NID+7), G92FILE2(1:NID+7), &  
-     &              G92FILE2(1:NID+7)                      ! 9-4-14   
-500   FORMAT ('if(-e fort.21) cat fort.21 >> ',A,6A1 / & 
+      WRITE(20,500) G92FILE2(1:NID+7), SUM, G92FILE2(1:NID+7), G92FILE2(1:NID+7), &
+     &              G92FILE2(1:NID+7)                      ! 9-4-14
+500   FORMAT ('if(-e fort.21) cat fort.21 >> ',A,6A1 / &
 !    & 'if ($i == 1) then' / &                             ! 5-4-10
 !    & 'cp -f fort.21 ',A,'.sum' / &                       ! 5-4-10
 !    & 'else' / &                                          ! 5-4-10
@@ -746,7 +746,7 @@ Big_loop : DO LGRPS=1,N_GO
      &              N_SPGR+1,(COMPDID(1:NID),J=1,2), &
      &              POTENTIAL_FILE                        ! 26feb03
 10        FORMAT ('#!/bin/csh'/ &
-     &   'setenv dir PREDICTIONS'/ &
+     &   'setenv dir /c/Users/ACER/Downloads/PREDICTIONS'/ &
      &            '# write new directories & move *.com file'/ &
      &            'set n=1'/'set f=',1H(,29(A2,1X),1H\,/25(A2,1X),1H)/ &
      &            'set d=',1H(,29(A2,1X),1H\,/25(A2,1X),1H)/ &
@@ -808,7 +808,7 @@ Big_loop : DO LGRPS=1,N_GO
 !
 1332  IALL = 0
 !     IF (GROUP .EQ. '  ' .OR. GROUP .EQ. 'AL' .OR. GROUP .EQ. 'al') &
-      IF (GROUP .EQ. '  ' .OR. GROUP .EQ. '31' .OR. GROUP .EQ. '54') &        
+      IF (GROUP .EQ. '  ' .OR. GROUP .EQ. '31' .OR. GROUP .EQ. '54') &
      &      IALL = 1
 !----Set IDCHG = 2...hold-over from original program.  Only one type
 !     of charge is input with atom coordinates.
@@ -1095,7 +1095,7 @@ Big_loop : DO LGRPS=1,N_GO
 !----Start to write master.com... files
       WRITE (20,39) (NMOL+1)
 39    FORMAT ('#!/bin/csh'/'pwd'/'#'/'time'/'date'/'#'/ &
-     &   'setenv dir PREDICTIONS'/&
+     &   'setenv dir /c/Users/ACER/Downloads/PREDICTIONS'/&
      &   '#'/'#****initial MOLPAK search****'/'#'/ &
      &   '# if input.* exists, restart PMIN'/ &
      &   'set k=1'/'while ($k != ',I4,')'/ &
@@ -1241,8 +1241,8 @@ Big_loop : DO LGRPS=1,N_GO
 !    &'$dir/PMIN/pmin.exe                           #  run PMIN' / &
      &'###################################################')  ! replaced  11-29-07
       WRITE (20,1665)
-1665  FORMAT('if (-e core) rm -f core') 
-      WRITE (20,500) G92FILE2(1:NID+7), SUM, G92FILE2(1:NID+7), G92FILE2(1:NID+7), G92FILE2(1:NID+7)  
+1665  FORMAT('if (-e core) rm -f core')
+      WRITE (20,500) G92FILE2(1:NID+7), SUM, G92FILE2(1:NID+7), G92FILE2(1:NID+7), G92FILE2(1:NID+7)
 500   FORMAT ('if(-e fort.21) cat fort.21 >> ',A,6A1 /&
 !    & 'if ($i == 1) then' / &                             ! 5-4-10
 !    & 'cp -f fort.21 ',A,'.sum' / &                       ! 5-4-10
@@ -1337,7 +1337,7 @@ Big_loop : DO LGRPS=1,N_GO
      &              N_SPGR+1,(COMPDID(1:NID),J=1,2), &
      &              POTENTIAL_FILE                        ! 26feb03
 10        FORMAT ('#!/bin/csh'/ &
-     &   'setenv dir PREDICTIONS'/&
+     &   'setenv dir /c/Users/ACER/Downloads/PREDICTIONS'/&
 !    &   'cp -f $dir/PMIN/PMIN.inp  .  # if need, to modify PMIN.inp'/&
      &            '# write new directories & move *.com file'/ &
      &            'set n=1'/'set f=',1H(,29(A2,1X),1H\,/25(A2,1X),1H)/ &
@@ -1676,7 +1676,7 @@ Big_loop : DO LGRPS=1,N_GO
 !----Start to write master.com... files
       WRITE (20,39)(NMOL+1)
 39    FORMAT ('#!/bin/csh'/'pwd'/'#'/'time'/'date'/'#'/ &
-     &   'setenv dir PREDICTIONS'/ &
+     &   'setenv dir /c/Users/ACER/Downloads/PREDICTIONS'/ &
      &       'mkdir FDAT-files'/ &
      &       '# ********** initial MOLPAK search **********'/'#'/ &
      &       '# if input.* is existing, restart DMACRYS'/ &
@@ -1799,7 +1799,7 @@ Big_loop : DO LGRPS=1,N_GO
      &       '   rm -f fort.21')
       WRITE (20,955)
 955      FORMAT (' endif'/ &
-     &           'if (-e molpak.cell) then'/ & 
+     &           'if (-e molpak.cell) then'/ &
      &           'cat fort.49 >> molpak.cell'/'else'/ &
      &           'mv fort.49 molpak.cell'/'endif'/ &
      &           '#****run DMACRYS****')
@@ -1807,7 +1807,7 @@ Big_loop : DO LGRPS=1,N_GO
 !     IF(I_POTE.EQ.2) GOTO 7777               ! 10-9-07
 7775  IF (NSOL .EQ. 0) THEN
       WRITE (20,957)SEARCH_FILE,SEARCH_FILE,NEWFILE2(1:NID+7),SUM,NEWFILE2(1:NID+7), NEWFILE2(1:NID+7), &
-     &              NEWFILE2(1:NID+7)                       ! 9-4-14   
+     &              NEWFILE2(1:NID+7)                       ! 9-4-14
 957   FORMAT ('# fort.9 from MOLPAK as an input of wmin2fdat'/ &
      &'#cp fort.9 wmininput.$i'/ &                          ! temp
      &'rm -f fort.15'/ &
@@ -1831,7 +1831,7 @@ Big_loop : DO LGRPS=1,N_GO
      &'#mv fort.15 FDAT-files/$i.fdat'/'mv fort.16 $i.SHELX'/&
      &'mv fort.12 $i.summary'/'mv fort.13 $i.save'/ &
      &'rm -f graphic $i-2nd.dmain'/'echo "2nd DMACRYS finished"'/ &
-     &'if (-e fort.21) rm -f fort.21'/ &  
+     &'if (-e fort.21) rm -f fort.21'/ &
      &'rm -f fort.15'/'cp -f ',A14,' fort.15'/ &
      &'if (-e fort.5) rm -f fort.5'/'cp -f $i.summary   fort.5'/ &
      &'$dir/UTILITIES/read-sum-4moldma.exe < fort.5'/ &
@@ -1843,9 +1843,9 @@ Big_loop : DO LGRPS=1,N_GO
 !    & 'cat  fort.21 >>  ', A, '.sum'/'endif')             ! 5-4-10
      & 'if (-e ',A,'.sum) then' / &                        ! 9-4-14
      & ' cat fort.21 >> ', A, '.sum'/'else'/ &             ! 9-4-14
-     & ' cp -f fort.21 ',  A, '.sum'/'endif')              ! 9-4-14   
+     & ' cp -f fort.21 ',  A, '.sum'/'endif')              ! 9-4-14
 ELSE
-      WRITE (20,958)SEARCH_FILE,SEARCH_FILE,NEWFILE2(1:NID+7),SUM, NEWFILE2(1:NID+7),NEWFILE2(1:NID+7), & 
+      WRITE (20,958)SEARCH_FILE,SEARCH_FILE,NEWFILE2(1:NID+7),SUM, NEWFILE2(1:NID+7),NEWFILE2(1:NID+7), &
      &              NEWFILE2(1:NID+7)                      ! 9-4-14  run special solution
 958   FORMAT ('# fort.9 from MOLPAK as an input of wmin2fdat'/ &
      &'#cp fort.9 wmininput.$i'/ &                          ! temp
@@ -1887,7 +1887,7 @@ ELSE
       GO TO 7778
 7776  IF (NSOL .EQ. 0) THEN
       WRITE (20,9570)SEARCH_FILE,SEARCH_FILE,NEWFILE2(1:NID+7),SUM, NEWFILE2(1:NID+7),NEWFILE2(1:NID+7), &
-     &               NEWFILE2(1:NID+7)                     ! 9-4-14    
+     &               NEWFILE2(1:NID+7)                     ! 9-4-14
 9570  FORMAT ('# fort.9 from MOLPAK as an input of wmin2fdat'/ &
      &'#cp fort.9 wmininput.$i'/ &                          ! temp
      &'rm -f fort.15'/ &
@@ -1967,7 +1967,7 @@ ELSE
      GO TO 7778
 7777 IF (NSOL .EQ. 0) THEN                                                ! 10-9-07
       WRITE (20,9577)SEARCH_FILE,SEARCH_FILE,NEWFILE2(1:NID+7),SUM, NEWFILE2(1:NID+7),NEWFILE2(1:NID+7), &
-     &               NEWFILE2(1:NID+7)                     ! 9-4-14       
+     &               NEWFILE2(1:NID+7)                     ! 9-4-14
 9577  FORMAT ('# fort.9 from MOLPAK as an input of wmin2fdat'/ &
      &'#cp fort.9 wmininput.$i'/ &                          ! temp
      &'rm -f fort.15'/ &
@@ -2005,7 +2005,7 @@ ELSE
      & ' cat fort.21 >> ', A, '.sum'/'else'/ &             ! 9-4-14
      & ' cp -f fort.21 ',  A, '.sum'/'endif')              ! 9-4-14
       ELSE
-      WRITE (20,9587)SEARCH_FILE,SEARCH_FILE,NEWFILE2(1:NID+7),SUM, NEWFILE2(1:NID+7), NEWFILE2(1:NID+7), & 
+      WRITE (20,9587)SEARCH_FILE,SEARCH_FILE,NEWFILE2(1:NID+7),SUM, NEWFILE2(1:NID+7), NEWFILE2(1:NID+7), &
      &               NEWFILE2(1:NID+7)                     ! 9-4-14  run special solution
 9587  FORMAT ('# fort.9 from MOLPAK as an input of wmin2fdat'/ &
      &'#cp fort.9 wmininput.$i'/ &                          ! temp
@@ -2123,7 +2123,7 @@ ELSE
       CHARACTER (2) :: FILE(N_SPGR) = (/'AF','BH','BD','BF','AH','AY',&
      &              'AZ','AV','AB','AQ','AI','CC','DC','AK','CA','AM',&
      &              'FA','FC','DA','DB','DD','DE','CB','AA','AP','BA',&
-     &              'BB','CD','CE','AU','AS', &                            ! default 31                        
+     &              'BB','CD','CE','AU','AS', &                            ! default 31
      &              'AE', 'AC', 'AD', 'AG', 'AJ', 'AL', 'FD', 'AN', 'AO',&
      &              'FB', 'AR', 'AT', 'BE', 'AW', 'BG', 'AX', 'BI', 'BC',&
      &              'BJ', 'BK', 'CF', 'DF', 'DG'/)                         ! additional 23
@@ -2143,12 +2143,12 @@ ELSE
      &               'CD','CB','AU','AS', &                                ! default 31
      &              'AE', 'AC', 'AD', 'AG', 'AJ', 'AL', 'FD', 'AN', 'AO',&
      &              'FB', 'AR', 'AT', 'BE', 'AW', 'BG', 'AX', 'BI', 'BC',&
-     &              'BJ', 'BK', 'CF', 'DF', 'DG'/)                         ! additional 23 
+     &              'BJ', 'BK', 'CF', 'DF', 'DG'/)                         ! additional 23
       CHARACTER (500) :: V_FORMAT = '(''#!/bin/csh''/&
      &       ''# write new directories & move *.com file''//&
 !    &       ''set f=('',99(A2,1X),1H)/&
 !    &       ''set d=('',99(A2,1X),1H)/&
-     &       ''set f=('',54(A2,1X),1H)/&          
+     &       ''set f=('',54(A2,1X),1H)/&
      &       ''set d=('',54(A2,1X),1H)/&
      &       ''set dir1 = ($d)''/&
      &       ''set fl  = ($f)'')'

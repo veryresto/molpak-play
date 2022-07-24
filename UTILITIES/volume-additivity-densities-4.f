@@ -88,7 +88,7 @@ C                             file
       JCALCD = 1
 C
 C----Pick up volumes and weights from table3 & store in DATA_TABLE?        ! 12-18-96
-      DIR='/PREDICTIONS/UTILITIES/table3'
+      DIR='/c/Users/ACER/Downloads/PREDICTIONS/UTILITIES/table3'
 C     DIR='/export/software/predictions-100cyc04/UTILITIES/table3'         ! 6/12/05
 771   OPEN (UNIT=18, FILE=DIR, STATUS='OLD')
          READ (18,*)                                                       ! 12/16/96
@@ -741,7 +741,7 @@ C----Determine connectivity....use max distance of DMAX for most
             IF (LABEL(I)(1:1) .EQ. 'X' .OR.          ! X = BR     ! 2/26/00
      X          LABEL(J)(1:1) .EQ. 'X') DMAX = 2.04  ! X = BR     ! 2/26/00
 C
-            IF (LABEL(I)(1:1) .EQ. 'C' .AND.         ! C-C = 1.78 ! 7/14/05 
+            IF (LABEL(I)(1:1) .EQ. 'C' .AND.         ! C-C = 1.78 ! 7/14/05
      X          LABEL(J)(1:1) .EQ. 'C') DMAX = 1.78               ! 7/14/05
 C
             IF (LABEL(I)(1:1) .EQ. 'Z' .OR.          ! Z = CL     ! 3/4/00
